@@ -25,7 +25,7 @@ app.listen(port, () => {
   console.log(`✅ Server is running at http://localhost:${port}`);
 });
 
-// 取得使用者資訊 API
+// 取得使用者資訊 
 app.get("/api/user/profile/:uid", async (req, res) => {
     const uid = req.params.uid;
   
@@ -66,7 +66,7 @@ app.put("/api/user/update/:uid", async (req, res) => {
       res.status(500).json({ message: "Internal Server Error" });
     }
   });
-  
+  //使用這提交反饋
   app.post("/api/feedback/submit/:uid", async (req, res) => {
     const uid = req.params.uid;
     const { feedbackText, rating } = req.body;
